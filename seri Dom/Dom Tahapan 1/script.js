@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 // Manipulasi Element
 
 // ke-1 Pengunaan innerHTML untuk menganti isi dari html tanpa menyentuh langsung HTMLNYA
 const napi = document.getElementById('judul');
- napi.innerHTML = 'Pace Batss';
+ napi.innerHTML = 'Pace';
 
 //ke-2 Pengunaan element.Style.<propertiCSS>
 const pace = document.querySelector('#judul');
@@ -20,7 +19,6 @@ war.getAttribute('href');//tulis di console
 //untuk menghilangkan sebuah attribute
 war.removeAttribute('href');//tulis d console
 
-
                //element.classsList//
                const p2 = document.querySelector('.p2');
               //element.classList.add ()-> untuk menembahkan class baru
@@ -35,37 +33,3 @@ war.removeAttribute('href');//tulis d console
               p2.classList.contains('empat');
               //element.classList.replace() -> untuk menganti kelas yang ada dengan kelas yang baru
               p2.classList.replace('tiga' , 'empat');
-=======
-// DOM selection
-//ke-1 document.getElementById() -> mengembalikan element
-   const judul = document.getElementById('judul');
-judul.style.backgroundColor = 'black';
-judul.style.color = 'white';
-judul.innerHTML = 'Halaman Zoro';
-
-
-//ke-2 document.getElementsByTagName() -> mengembalikan HTML colection
-    const napi = document.getElementsByTagName('p');
-    for( let i = 0; i < napi.length; i++){
-       napi[i].style.backgroundColor = 'lightblue';
-    }
-
-
-//ke-3 document.getElementsByClassName() -> mengembalikan HTML colection
-  const pace = document.getElementsByClassName('p1');
-pace[0].innerHTML = 'ini di ubah mengunakan javascript';  
-  
-   dengan mengunakan 2 query  ini untuk supaya tidak merubah haaman htmlNya
-ke-4 document.querrySelctor() -> mengembalikan hanya 1 element
- const p4 = document.querySelector('#b p');
-p4.style.color = 'white';
-p4.style.fontSize = '20px';
-p4.style.opacity = '80%';
-p4.style.cursor = 'pointer';
-p4.style.borderRadius = '20px';
-p4.style.backgroundColor = 'black';
-
-   //document.querySelectorAll() ->Mengembalikan semua elemant tapi megunakan indeks ke berapa
-  const p = document.querySelectorAll ('p');
-p[2].style.backgroundColor = 'pink';
->>>>>>> 1f5763f6ab10e173ec56187016dd2388e2cbd405
