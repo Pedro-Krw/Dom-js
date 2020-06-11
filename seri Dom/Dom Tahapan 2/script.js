@@ -2,8 +2,16 @@
 const p3 = document.querySelector(".p3");
 
 function pengalih() {
-  var a = (p3.style.backgroundColor = "red");
-  return a;
+  let a = (p3.style.backgroundColor = "red");
+  let b = (p3.style.color = "white");
+  let semua = a != b;
+  return semua;
+}
+function inject() {
+  let c = (p3.style.color = "black");
+  let d = (p3.style.backgroundColor = "lime");
+  let total = c != d;
+  return total;
 }
 p3.addEventListener("mouseenter", function () {
   p3.style.backgroundColor = "lightgreen";
@@ -11,15 +19,15 @@ p3.addEventListener("mouseenter", function () {
   p3.style.transition = "3s";
   p3.innerHTML = Math.floor(Math.random() * 5);
   if (p3.innerHTML < 1) {
-    p3.innerHTML = "Pace";
+    p3.innerHTML = ["pace", inject()];
   } else if (p3.innerHTML > 1 && p3.innerHTML <= 2) {
-    p3.innerHTML = "random";
+    p3.innerHTML = ["NAPI", inject()];
   } else if (p3.innerHTML > 2 && p3.innerHTML <= 3) {
     p3.innerHTML = ["Anonymous", pengalih()];
   } else if (p3.innerHTML > 3 && p3.innerHTML <= 4) {
-    p3.innerHTML = "komputer";
+    p3.innerHTML = ["error", inject()];
   } else {
-    p3.innerHTML = "lacak";
+    p3.innerHTML = ["lacak", inject()];
   }
 });
 p3.addEventListener("mouseleave", function () {
