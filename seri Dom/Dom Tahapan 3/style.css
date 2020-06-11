@@ -1,0 +1,12 @@
+html {
+  text-align: center;
+}
+button {
+  transition: 0.1s;
+  height: 50px;
+  width: 50px;
+}
+button:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}

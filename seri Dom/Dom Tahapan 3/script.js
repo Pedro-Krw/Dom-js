@@ -1,19 +1,17 @@
-// DOM selection
-//ke-1 document.getElementById() -> mengembalikan element
-   const judul = document.getElementById('judul');
-judul.style.backgroundColor = 'black';
-judul.style.color = 'white';
-judul.innerHTML = 'Halaman Zoro';
-
-
-//ke-2 document.getElementsByTagName() -> mengembalikan HTML colection
-    const napi = document.getElementsByTagName('p');
-    for( let i = 0; i < napi.length; i++){
-       napi[i].style.backgroundColor = 'lightblue';
-    }
-
-
-//ke-3 document.getElementsByClassName() -> mengembalikan HTML colection
-  const pace = document.getElementsByClassName('p1');
-pace[0].innerHTML = 'ini di ubah mengunakan javascript';  
-
+// ? BErmain dengan Warna Dan Berinteraksi Dengan Dom//
+const ubah = document.getElementById("ajaib");
+ubah.addEventListener("click", function () {
+  let acak = Math.floor(Math.random() * 5);
+  if (acak < 1) {
+    acak = document.body.style.backgroundColor = "black";
+  } else if (acak > 1 && acak <= 2) {
+    acak = document.body.style.backgroundColor = "blue";
+  } else if (acak > 2 && acak <= 3) {
+    acak = document.body.style.backgroundColor = "salmon";
+  } else if (acak > 3 && acak <= 4) {
+    acak = document.body.style.backgroundColor = "magenta";
+  } else {
+    acak = document.body.style.backgroundColor = "lime";
+    return acak;
+  }
+});
