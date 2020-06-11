@@ -1,11 +1,26 @@
-// ? MENGUNAKAN EventListener
+// ? MENGUNAKAN EventListener Mendenganrkan User
 const p3 = document.querySelector(".p3");
 
+function pengalih() {
+  var a = (p3.style.backgroundColor = "red");
+  return a;
+}
 p3.addEventListener("mouseenter", function () {
   p3.style.backgroundColor = "lightgreen";
   p3.style.cursor = "pointer";
   p3.style.transition = "3s";
-  p3.innerHTML = "Pace batszz";
+  p3.innerHTML = Math.floor(Math.random() * 5);
+  if (p3.innerHTML < 1) {
+    p3.innerHTML = "Pace";
+  } else if (p3.innerHTML > 1 && p3.innerHTML <= 2) {
+    p3.innerHTML = "random";
+  } else if (p3.innerHTML > 2 && p3.innerHTML <= 3) {
+    p3.innerHTML = ["Anonymous", pengalih()];
+  } else if (p3.innerHTML > 3 && p3.innerHTML <= 4) {
+    p3.innerHTML = "komputer";
+  } else {
+    p3.innerHTML = "lacak";
+  }
 });
 p3.addEventListener("mouseleave", function () {
   p3.style.backgroundColor = "lightblue";
