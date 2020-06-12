@@ -14,7 +14,7 @@ button:hover {
   background-color: teal;
 }
 input {
-  transition: 0.5s;
+  transition: 0.2s;
   margin-top: 2px;
 }
 input:hover {
