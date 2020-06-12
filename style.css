@@ -8,6 +8,7 @@ button {
   transition: 0.5s;
   margin-inline-end: auto;
   margin-left: 10px;
+  filter: drop-shadow(5px 5px 2px black);
 }
 button:hover {
   transform: scale(1.2);
@@ -27,13 +28,21 @@ input:hover {
   width: 25px;
   height: 25px;
   margin: 10px auto;
+  border-radius: 5px;
 }
 .merah {
   background-color: red;
+  filter: drop-shadow(5px 5px 2px black);
 }
 .hijau {
   background-color: lime;
+  filter: drop-shadow(5px 5px 2px black);
 }
 .biru {
+  color: aliceblue;
   background-color: blue;
+  filter: drop-shadow(5px 5px 2px black);
+}
+h1 {
+  filter: drop-shadow(5px 5px 2px white);
 }
