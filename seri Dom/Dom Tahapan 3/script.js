@@ -1,17 +1,20 @@
 // ? BErmain dengan Warna Dan Berinteraksi Dengan Dom//
 const ubah = document.getElementById("ajaib");
 ubah.addEventListener("click", function () {
-  let acak = Math.floor(Math.random() * 5);
-  if (acak < 1) {
-    acak = document.body.style.backgroundColor = "black";
-  } else if (acak > 1 && acak <= 2) {
-    acak = document.body.style.backgroundColor = "blue";
-  } else if (acak > 2 && acak <= 3) {
-    acak = document.body.style.backgroundColor = "salmon";
-  } else if (acak > 3 && acak <= 4) {
-    acak = document.body.style.backgroundColor = "magenta";
-  } else {
-    acak = document.body.style.backgroundColor = "lime";
-    return acak;
-  }
+  // document.body.style.backgroundColor = "lime";
+  document.body.classList.toggle("biru-muda");
+});
+
+//?Membuat button baru melalui Vanila JavaScript//
+const random = document.createElement("button");
+const tulisan = document.createTextNode("acak warna");
+random.appendChild(tulisan);
+random.setAttribute("type", "button");
+ubah.after(random);
+
+random.addEventListener("click", function () {
+  const r = Math.round(Math.random() * 255 + 1);
+  const g = Math.round(Math.random() * 255 + 1);
+  const b = Math.round(Math.random() * 255 + 1);
+  document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 });
