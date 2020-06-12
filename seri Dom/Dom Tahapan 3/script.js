@@ -42,3 +42,15 @@ sBiru.addEventListener("input", function () {
   const b = sBiru.value;
   document.body.style.backgroundColor = "rgb(" + r + ", " + g + " , " + b + ")";
 });
+
+//! Mengatur Pergerakan Mouse Pada layar//
+
+document.body.addEventListener("mousemove", function (napi) {
+  //? Mencari tau Posisi Mouse yang di gunakan oleh user//
+  // console.log(napi.clientX);
+  //? mencari ukuran brouser
+  // console.log(window.innerWidth);
+  const xPos = Math.round((napi.clientX / window.innerWidth) * 255);
+  const yPos = Math.round((napi.clientY / window.innerHeight) * 255);
+  document.body.style.backgroundColor = "rgb(" + xPos + ", " + yPos + ", 100)";
+});
